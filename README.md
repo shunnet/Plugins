@@ -1,4 +1,4 @@
-<h1 align="center">🔌 Snet.Plugins</h1>
+﻿<h1 align="center">🔌 Snet.Plugins</h1>
 
 <p align="center">
   <img width="120" height="120" src="https://api.snet.cn/pic/nuget.png" alt="Snet Logo"/>
@@ -16,6 +16,7 @@
 
 <p align="center">
   <a href="https://snet.cn"><b>🌐 Snet 官网</b></a> ·
+  <a href="https://www.nuget.org/profiles/Shun"><b>📦 NuGet 插件</b></a> ·
   <a href="https://github.com/shunnet/Plugins"><b>📦 插件仓库</b></a> ·
   <a href="https://github.com/shunnet/Daq"><b>🔌 Daq 工具</b></a> ·
   <a href="https://github.com/shunnet/SKILLS/tree/main/PluginDev-Skill"><b>📚 插件开发规范</b></a>
@@ -37,6 +38,10 @@
 | `mq` | `IMq` | 消息中间件的生产、消费或自定义消息接入 |
 
 插件接口、依赖版本和宿主支持情况可能随 Snet 版本变化。请以插件自己的 README 和对应版本的 [PluginDev-Skill](https://github.com/shunnet/SKILLS/tree/main/PluginDev-Skill) 为准。
+
+## 📦 NuGet 上已发布的插件
+
+除本仓库中的源码插件外，**Shun 已开发并发布的 Snet 插件及相关生态包**也可通过 NuGet 查看和获取：[NuGet — Shun](https://www.nuget.org/profiles/Shun)。这些 NuGet 包属于 Snet 插件生态；本仓库则用于分享插件源码及其说明。
 
 ## 🗂️ 目录约定
 
@@ -84,7 +89,7 @@ shunnet/
 5. **配置与依赖**：需要填写的参数、外部依赖、权限、网络或设备前置条件；不得放真实凭据。
 6. **构建、测试与使用**：如何构建、验证和接入；若宿主有额外安装步骤，请注明。
 7. **限制与已知问题**：已知边界、未实现功能及注意事项。
-8. **作者与许可**：维护者 GitHub 用户名，以及源码适用的许可证或授权说明。
+8. **作者与许可**：维护者 GitHub 用户名；本仓库上传的插件默认采用 MIT 许可证，无需另行选择其他许可。
 
 可参考下面的模板：
 
@@ -95,7 +100,7 @@ shunnet/
 - 接口：IDaq 或 IMq
 - 作者：@GitHub用户名
 - 兼容版本：.NET / Snet.Core / 宿主版本
-- 许可证：许可证名称或授权说明
+- 许可证：MIT（默认）
 
 ## 功能简介
 说明插件实现了什么。
@@ -123,7 +128,7 @@ shunnet/
 - 不要提交与插件无关的通用框架、部署环境、项目配置、内部工具或私有业务依赖。插件所必需的少量辅助代码可以保留，但应说明用途。
 - 不要提交密钥、密码、Token、证书、真实生产连接信息、个人数据或其他机密内容；请使用示例值或环境变量说明。
 - 不要提交 `bin/`、`obj/`、缓存、临时文件、编译产物或宿主运行数据。默认仅提交源码、必要的项目文件、示例配置（脱敏）和文档。
-- 仅提交你有权公开和授权他人使用的代码与依赖；注明第三方依赖及其许可证。
+- 仅提交你有权公开的代码与依赖；第三方依赖仍须遵守其各自许可证并注明来源。
 
 ## 🚀 如何贡献
 
@@ -131,9 +136,15 @@ shunnet/
 2. 为每个插件添加完整的 `README.md`，说明用途、适用场景、兼容性和使用方法。
 3. 检查提交内容仅包含插件必要实现；移除业务系统代码、机密信息和构建产物。
 4. 尽可能在本地构建并验证接口实现，注明测试环境和结果。
-5. 提交 Pull Request，并在描述中列出插件类型、接口、适配场景、依赖/许可证及验证结果。
+5. 提交 Pull Request，并在描述中列出插件类型、接口、适配场景、依赖及验证结果。提交即表示接受本仓库的 MIT 默认许可规则。
 
 维护者可以要求修改目录、文档、代码范围或兼容性说明。合并不代表对插件安全性、正确性或与所有 Snet 宿主兼容性的保证。
+
+## 📜 许可证
+
+**上传到本仓库的所有插件源码默认采用 MIT 许可证。** 提交插件即表示你确认拥有提交该代码的权利，并同意按 MIT 许可证授权他人使用、复制、修改、合并、发布、分发、再许可及/或销售该代码的副本；原作者保留其著作权。无法或不愿按 MIT 许可的代码，请勿提交。
+
+本仓库根目录的 [`LICENSE`](LICENSE) 文件提供 MIT 许可证全文。第三方依赖的许可证不因本条款而改变，贡献者须遵守并注明其各自许可要求。
 
 ## 🔗 相关资源
 
@@ -141,8 +152,9 @@ shunnet/
 | --- | --- |
 | [Snet.Iot.Daq](https://github.com/shunnet/Daq) | 插件化数据采集工具；可在兼容版本中加载相应插件 |
 | [Snet.SKILLS — PluginDev-Skill](https://github.com/shunnet/SKILLS/tree/main/PluginDev-Skill) | `IDaq` / `IMq` 插件开发契约与指导 |
+| [NuGet — Shun](https://www.nuget.org/profiles/Shun) | Shun 已开发并发布的 Snet 插件及相关生态包 |
 | [Snet 官网](https://snet.cn/) | Snet 相关信息 |
 
 ## ⚠️ 安全提示
 
-插件代码会在使用者的环境中运行。使用前请自行检查源码、依赖、权限和网络行为，并确认其来源可信；不要直接加载未经审查的代码。本仓库是社区分享目录，不对第三方插件提供安全审计或适配保证。
+所有上传内容均须经过管理员审核；审核通过后方可合并或发布。审核主要检查目录结构、文档、代码范围、许可和基本兼容性，不等同于完整安全审计，也不保证插件完全安全或兼容所有 Snet 宿主。插件会在使用者的环境中运行，请在使用前自行检查源码、依赖、权限和网络行为，不要直接加载未经审查的代码。
