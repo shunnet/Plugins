@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <AccelerateBuildsInVisualStudio>True</AccelerateBuildsInVisualStudio>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Authors>Shun</Authors>
+    <Product>Daq</Product>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Description>采集协议：NetMQ 开发的性能测试（专用库）</Description>
+    <PackageProjectUrl>https://snet.cn</PackageProjectUrl>
+    <AuthorsName>Shun</AuthorsName>
+    <CompanyName>Snet</CompanyName>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NetMQ" Version="4.0.4.3" />
+    <PackageReference Include="Snet.Core" Version="26.271.1" />
+  </ItemGroup>
+</Project>
